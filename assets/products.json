@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt Graphique",
+    "price": 29.99,
+    "image": "assets/tshirt1.jpg",
+    "description": "T-shirt moderne, 100% coton bio.",
+    "stock": 12,
+    "category": "tshirt"
+  },
+  {
+    "id": 2,
+    "name": "Sweat Capuche",
+    "price": 49.99,
+    "image": "assets/sweat1.jpg",
+    "description": "Sweat à capuche confortable.",
+    "stock": 8,
+    "category": "sweat"
+  }
+]

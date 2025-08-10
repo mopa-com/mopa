@@ -1,49 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Panier - MiniShop</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mon Panier</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header>
-    <h1>Mon Panier</h1>
+    <a href="index.html" class="logo">Ma Boutique</a>
     <nav>
-      <a href="index.html">Accueil</a> |
-      <a href="cart.html">Panier</a> |
+      <a href="cart.html">Panier</a>
       <a href="admin.html">Admin</a>
     </nav>
   </header>
-
   <main>
-    <h2>Articles dans votre panier</h2>
+    <h1>Votre Panier</h1>
     <div id="cart-items"></div>
-    <p id="empty-cart">Votre panier est vide.</p>
+    <div class="cart-summary">
+      <span id="cart-total"></span>
+      <a href="checkout.html" class="btn">Commander</a>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 MiniShop.</p>
-  </footer>
-
-  <script>
-    // afficher le panier à partir de localStorage
-    function loadCart() {
-      const cartContainer = document.getElementById('cart-items');
-      const emptyMessage = document.getElementById('empty-cart');
-      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      if (cart.length === 0) {
-        emptyMessage.style.display = 'block';
-        return;
-      }
-      emptyMessage.style.display = 'none';
-      cart.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'cart-item';
-        itemDiv.innerHTML = '<strong>' + item.name + '</strong> - ' + item.price + ' €';
-        cartContainer.appendChild(itemDiv);
-      });
-    }
-    window.onload = loadCart;
-  </script>
+  <script src="js/cart.js"></script>
 </body>
 </html>

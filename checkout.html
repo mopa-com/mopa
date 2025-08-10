@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Valider la commande</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Ma Boutique</a>
+  </header>
+  <main>
+    <h1>Valider la commande</h1>
+    <form id="checkout-form">
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <input type="text" name="address" placeholder="Adresse de livraison" required />
+      <button type="submit" class="btn">Commander</button>
+    </form>
+    <div id="confirmation" style="display:none"></div>
+  </main>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
